@@ -30,3 +30,40 @@ GROQ_API_KEY="your_api_key_here"
 streamlit run file.py
 
 Access the chatbot in your browser at http://localhost:8501.
+
+##### Usage Guide
+--> Enter your personal details, including your name, email, phone, experience, position, location, and tech stack.
+--> Click Submit to generate technical questions based on the tech stack provided.
+--> Answer the questions directly in the app.
+--> Click Submit Answers to save your responses.
+--> Optionally, end the conversation after submitting your answers.
+
+### Technical Details
+
+##### Libraries Used:
+streamlit - UI framework for interactive web applications.
+langchain - Provides an interface for interacting with the Groq API.
+python-dotenv - Manages environment variables.
+json - Handles structured storage of candidate data.
+datetime - Adds timestamps for saved responses.
+
+##### Model Details
+The chatbot uses llama3-8b-8192, an LLM model from Groq, accessed via the LangChain framework.
+The model generates technical questions based on a structured prompt.
+
+##### Architectural Decisions
+Prompt Engineering: The prompt ensures structured JSON output, making it easier to parse.
+State Management: st.session_state maintains session persistence for candidate responses.
+File Storage: Candidate responses are saved as JSON files in the output directory for later review.
+
+##### Prompt Design
+##### The prompt instructs the LLM to generate structured interview questions covering:
+Problem-solving skills
+Best practices
+Real-world applications
+The output is strictly formatted as a JSON array, ensuring consistency and ease of processing.
+
+##### Future Enhancements
+Add authentication for recruiter access.
+Implement database storage instead of JSON files.
+Improve question generation logic using a ranking system.
