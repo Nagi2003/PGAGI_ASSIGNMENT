@@ -24,7 +24,7 @@ pip install -r requirements.txt
 Create a .env file in the project directory.
 
 ##### Add the following line to the .env file:
-GROQ_API_KEY=your_api_key_here
+GROQ_API_KEY="your_api_key_here"
 
 ##### Run the application:
 streamlit run file.py
