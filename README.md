@@ -31,39 +31,39 @@ streamlit run file.py
 
 Access the chatbot in your browser at http://localhost:8501.
 
-##### Usage Guide
---> Enter your personal details, including your name, email, phone, experience, position, location, and tech stack.
---> Click Submit to generate technical questions based on the tech stack provided.
---> Answer the questions directly in the app.
---> Click Submit Answers to save your responses.
---> Optionally, end the conversation after submitting your answers.
+##### Usage Guide:
+1. Enter your personal details, including your name, email, phone, experience, position, location, and tech stack.
+2. Click Submit to generate technical questions based on the tech stack provided.
+3. Answer the questions directly in the app.
+4. Click Submit Answers to save your responses.
+5. Optionally, end the conversation after submitting your answers.
 
 ### Technical Details
 
 ##### Libraries Used:
-streamlit - UI framework for interactive web applications.
-langchain - Provides an interface for interacting with the Groq API.
-python-dotenv - Manages environment variables.
-json - Handles structured storage of candidate data.
-datetime - Adds timestamps for saved responses.
+1. streamlit - UI framework for interactive web applications.
+2. langchain - Provides an interface for interacting with the Groq API.
+3. python-dotenv - Manages environment variables.
+4. json - Handles structured storage of candidate data.
+5. datetime - Adds timestamps for saved responses.
 
 ##### Model Details
-The chatbot uses llama3-8b-8192, an LLM model from Groq, accessed via the LangChain framework.
-The model generates technical questions based on a structured prompt.
+1. The chatbot uses llama3-8b-8192, an LLM model from Groq, accessed via the LangChain framework.
+2. The model generates technical questions based on a structured prompt.
 
 ##### Architectural Decisions
-Prompt Engineering: The prompt ensures structured JSON output, making it easier to parse.
-State Management: st.session_state maintains session persistence for candidate responses.
-File Storage: Candidate responses are saved as JSON files in the output directory for later review.
+1. Prompt Engineering: The prompt ensures structured JSON output, making it easier to parse.
+2. State Management: st.session_state maintains session persistence for candidate responses.
+3. File Storage: Candidate responses are saved as JSON files in the output directory for later review.
 
 ##### Prompt Design
 ##### The prompt instructs the LLM to generate structured interview questions covering:
-Problem-solving skills
-Best practices
-Real-world applications
-The output is strictly formatted as a JSON array, ensuring consistency and ease of processing.
+1. Problem-solving skills
+2. Best practices
+3. Real-world applications
+4. The output is strictly formatted as a JSON array, ensuring consistency and ease of processing.
 
 ##### Future Enhancements
-Add authentication for recruiter access.
-Implement database storage instead of JSON files.
-Improve question generation logic using a ranking system.
+1. Add authentication for recruiter access.
+2. Implement database storage instead of JSON files.
+3. Improve question generation logic using a ranking system.
