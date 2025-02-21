@@ -4,10 +4,10 @@ TalentScout is an AI-powered hiring assistant chatbot designed to streamline the
 ### Installation Instructions
 ##### Prerequisites
 Ensure you have the following installed on your system:
-Python 3.8+
-pip
-Virtual environment (optional but recommended)
-A Groq API Key (stored in a .env file)
+1. Python 3.8+
+2. pip
+3. Virtual environment (optional but recommended)
+4. A Groq API Key (stored in a .env file)
 
 ##### Clone the repository:
 git clone https://github.com/Nagi2003/PAGAI_Assignment.git
